@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EcoTrackApp</string>
+    <string name="checkbox_text"><u>Acepto términos y condiciones del uso de la plataforma Ecotrack</u></string>
+
 </resources>
