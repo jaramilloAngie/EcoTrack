@@ -262,7 +262,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="#FFFFFF"
-            android:padding="8dp"
             android:gravity="center"
             android:weightSum="4">
 
@@ -276,8 +275,8 @@
 
                 <ImageView
                     android:contentDescription="@null"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:src="@drawable/ic_inicio"
                     app:tint="#00FF00" />
 
@@ -299,8 +298,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:src="@drawable/ic_reciclado"
                     app:tint="#888888" />
 
@@ -321,8 +320,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:src="@drawable/ic_redimir"
                     app:tint="#888888" />
 
@@ -343,8 +342,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:src="@drawable/ic_perfil"
                     app:tint="#888888" />
 
