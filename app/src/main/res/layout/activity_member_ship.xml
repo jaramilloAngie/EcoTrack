@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true">
+
+    <!-- Encabezado fijo arriba -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@null"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/holtwoodonesc"
+            android:text="EC"
+            android:textSize="32sp"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/img"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/holtwoodonesc"
+            android:text="TRACK"
+            android:textSize="32sp"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Contenido principal con scroll -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Sección Tu Membresía -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TU MEMBRESÍA"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Tarjeta unificada: Básica + Facturación -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/borde_verde"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BÁSICA"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SUSCRIPCIÓN GRATUITA"
+                    android:textSize="8sp"
+                    android:textColor="#777777"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FACTURACIÓN:"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VER DETALLES"
+                    android:textSize="8sp"
+                    android:textColor="#777777"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- Otras Membresías -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OTRAS MEMBRESÍAS"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Membresía Básica -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde_verde"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BÁSICA"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SUSCRIPCIÓN GRATUITA"
+                    android:textColor="#777777"
+                    android:textStyle="bold"
+                    android:textSize="8sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• ACCESO A LA GAMIFICACIÓN Y SISTEMA DE RECICLAJE."
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="8sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- Membresía Premium -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/borde_verde"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PREMIUM"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="SUSCRIPCIÓN MENSUAL"
+                    android:textColor="#777777"
+                    android:textStyle="bold"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="• BONIFICACIÓN EXTRA DE PUNTOS.\n• ACCESO PRIORITARIO A EVENTOS."
+                    android:textColor="#000000"
+                    android:textSize="8sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Membresía Élite -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borde_verde"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ELITE"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SUSCRIPCIÓN MENSUAL"
+                    android:textColor="#777777"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• BENEFICIOS COMPLETOS\n• MAYORES RECOMPENSAS\n• ACCESO A SORTEOS\n• EVENTOS ESPECIALES"
+                    android:textStyle="bold"
+                    android:textSize="8sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:weightSum="4"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <!-- Botón Inicio -->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:contentDescription="@null"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_inicio"
+                    app:tint="#00FF00" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inicio"
+                    android:textColor="#000000"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- Botón Reciclado -->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_reciclado"
+                    app:tint="#888888" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reciclado"
+                    android:textColor="#888888"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- Botón Redimir -->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_redimir"
+                    app:tint="#888888" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Redimir"
+                    android:textColor="#888888"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- Botón Perfil -->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_perfil"
+                    app:tint="#888888" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perfil"
+                    android:textColor="#888888"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
