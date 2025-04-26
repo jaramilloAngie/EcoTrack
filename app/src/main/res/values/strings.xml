@@ -5,7 +5,7 @@
     <string name="go_back">Volver</string>
         <string name="name">Nombre</string>
         <string name="email">Email</string>
-        <string name="email_direction">Email aEmail addressaddress</string>
+        <string name="email_direction">Email@Email addressaddress</string>
         <string name="number_of_phone">Número de teléfono</string>
         <string name="direction">DIRECCIÓN</string>
         <string name="code_postal">Código postal</string>
@@ -13,4 +13,14 @@
         <string name="country">País</string>
         <string name="save_this_direction">Guardar esta dirección</string>
         <string name="add_direction">Agregar dirección</string>
-    </resources>
+
+    <string name="about_me">Acerca de mí</string>
+    <string name="personal_details">Detalles personales</string>
+    <string name="change_password">Cambiar la contraseña</string>
+    <string name="contrasena_actual">Contraseña actual</string>
+    <string name="current_password">Nueva contraseña</string>
+    <string name="Confirm_password">Confirmar contraseña</string>
+    <string name="save_configuration">Guardar configuración</string>
+    <string name="show_hide_password">Mostrar u ocultar contraseña</string>
+
+</resources>

@@ -12,47 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcoTrackApp"
         tools:targetApi="31">
-
-
-        <activity android:name=".VersionActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.EcoTrackApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".CuentaActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.EcoTrackApp">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-
-        <activity android:name=".MemberShipActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.EcoTrackApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".PrincipalActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.EcoTrackApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
         <activity
             android:name=".SignInActivity"
             android:exported="true"
@@ -63,6 +22,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".AccountActivity" />
+        <activity android:name=".AboutMeActivity" />
+        <activity android:name=".MyAddressActivity" />
+        <activity android:name=".VersionActivity" />
+
+
     </application>
 
 </manifest>

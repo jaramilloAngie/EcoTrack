@@ -2,7 +2,6 @@ package com.example.ecotrackapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ecotrackapp.databinding.ActivityVersionBinding
 
@@ -20,7 +19,7 @@ class VersionActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.toolbar.setNavigationOnClickListener {
-            val intent = Intent(this, CuentaActivity::class.java)
+            val intent = Intent(this, AccountActivity::class.java)
             startActivity(intent)
         }
 
