@@ -3,6 +3,7 @@ package com.example.ecotrackapp
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
@@ -10,6 +11,7 @@ import android.widget.Toast
 class MyAddressActivity : AppCompatActivity() {
 
     // Declaramos variables para los campos
+    private lateinit var backButton: ImageView
     private lateinit var nameEditText: EditText
     private lateinit var emailEditText: EditText
     private lateinit var phoneEditText: EditText
@@ -24,6 +26,10 @@ class MyAddressActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_address) // tu layout
 
+        backButton = findViewById(R.id.backButton)
+        backButton.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
         // Asociamos los views
         nameEditText = findViewById(R.id.nameEditText)
         emailEditText = findViewById(R.id.emailEditText)

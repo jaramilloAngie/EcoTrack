@@ -78,13 +78,13 @@
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/ic_person" android:layout_marginEnd="16dp"
                     android:contentDescription="@string/name" /> <TextView
-                android:id="@+id/nameTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Jaden Jackson"
-                android:textSize="16sp"
-                android:textColor="#000000" />
+                    android:id="@+id/nameTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Jaden Jackson"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
 
             </LinearLayout>
 
@@ -99,15 +99,19 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_email" android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/email" /> <TextView
-                android:id="@+id/emailTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Jaden123@Gmail.com"
-                android:textSize="16sp"
-                android:textColor="#000000" />
+                    app:srcCompat="@drawable/ic_email"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="@string/email" />
+
+                <EditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Correo electrónico"
+                    android:inputType="textEmailAddress"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
 
             </LinearLayout>
 
@@ -122,17 +126,22 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_phone" android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/number_of_phone" /> <TextView
-                android:id="@+id/phoneTextView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+62 202 555 0142"
-                android:textSize="16sp"
-                android:textColor="#000000" />
+                    app:srcCompat="@drawable/ic_phone"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="@string/number_of_phone" />
+
+                <EditText
+                    android:id="@+id/phoneEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Número de teléfono"
+                    android:inputType="phone"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
 
             </LinearLayout>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -152,7 +161,7 @@
                 android:layout_marginBottom="8dp">
 
                 <EditText
-                    android:id="@+id/ActuallyPassword"
+                    android:id="@+id/actuallyPasswordEditText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -161,6 +170,7 @@
                     android:padding="12dp"
                     android:drawableStart="@drawable/ic_lock"
                     android:drawablePadding="16dp" />
+
                 <ImageView
                     android:id="@+id/toggleActuallyPasswordVisibility"
                     android:layout_width="wrap_content"
