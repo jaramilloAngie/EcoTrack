@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/circle_background"
+    android:padding="10dp"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/ivImagen"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Recompensa"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvPuntos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10,000 Puntos"
+        android:textColor="#0D7501"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/btnCanjear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canjear"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#0D7501"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
