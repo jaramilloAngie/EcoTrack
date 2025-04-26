@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">EcoTrackApp</string>
     <string name="checkbox_text"><u>Acepto términos y condiciones del uso de la plataforma Ecotrack</u></string>
-
-</resources>
+    <string name="my_direction">Mi dirección</string>
+    <string name="go_back">Volver</string>
+        <string name="name">Nombre</string>
+        <string name="email">Email</string>
+        <string name="email_direction">Email aEmail addressaddress</string>
+        <string name="number_of_phone">Número de teléfono</string>
+        <string name="direction">DIRECCIÓN</string>
+        <string name="code_postal">Código postal</string>
+        <string name="city">Ciudad</string>
+        <string name="country">País</string>
+        <string name="save_this_direction">Guardar esta dirección</string>
+        <string name="add_direction">Agregar dirección</string>
+    </resources>
