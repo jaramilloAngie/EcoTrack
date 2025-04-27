@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Color de fondo verde -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00FF66" /> <!-- Verde -->
+        </shape>
+    </item>
+
+    <!-- Óvalo blanco para crear la curva hacia arriba -->
+    <item
+        android:top="200dp">
+        <shape android:shape="oval">
+            <size
+                android:width="800dp"
+                android:height="400dp" />
+            <solid android:color="#F5F5F5" /> <!-- Blanco del fondo principal -->
+        </shape>
+    </item>
+
+    <item
+        android:top="350dp">
+        <shape android:shape="rectangle">
+            <size
+                android:width="100dp"
+                android:height="200dp" />
+            <solid android:color="#F5F5F5" /> <!-- Blanco del fondo principal -->
+        </shape>
+    </item>
+
+</layer-list>
+
