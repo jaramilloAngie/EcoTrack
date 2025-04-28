@@ -13,59 +13,8 @@
         android:theme="@style/Theme.EcoTrackApp"
         tools:targetApi="31">
 
-
-        <activity android:name=".RedimirActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.EcoTrackApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".DetailRewardActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.EcoTrackApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".CuentaActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.EcoTrackApp">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-
-        <activity android:name=".MemberShipActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.EcoTrackApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".PrincipalActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.EcoTrackApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
         <activity
-            android:name=".SignInActivity"
+            android:name=".PrincipalActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.EcoTrackApp">
@@ -74,6 +23,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Actividades personalizadas -->
+
+        <activity android:name=".RedimirActivity" />
+        <activity android:name=".RecicladoActivity" />
+        <activity android:name=".AccountActivity" />
+        <activity android:name=".BottomNavigationActivity" />
+        <activity android:name=".AboutMeActivity" />
+        <activity android:name=".VersionActivity" />
+        <activity android:name=".DetailRewardActivity" />
+        <activity android:name=".MyAddressActivity" />
+
     </application>
 
 </manifest>

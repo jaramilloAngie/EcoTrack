@@ -170,100 +170,10 @@
     </LinearLayout>
 
     <!-- Navegación inferior -->
-    <LinearLayout
-        android:id="@+id/bottomNav"
+    <include
+        layout="@layout/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="#FFFFFF"
-        android:weightSum="4"
-        android:elevation="8dp">
-
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <ImageView
-                android:contentDescription="@null"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/ic_inicio"
-                app:tint="#0D7501" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Inicio"
-                android:textSize="10sp"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/ic_reciclado"
-                app:tint="#000000" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Reciclado"
-                android:textSize="10sp"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_redimir"
-                app:tint="#0D7501" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Redimir"
-                android:textSize="10sp"
-                android:textColor="#000000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/ic_perfil"
-                app:tint="#0D7501" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Perfil"
-                android:textSize="10sp"
-                android:textColor="#000000" />
-        </LinearLayout>
-    </LinearLayout>
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
