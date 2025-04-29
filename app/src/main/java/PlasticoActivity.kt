@@ -1,9 +1,12 @@
 package com.tuapp.reciclaje
 
+import Producto
+import ProductoAdapter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ecotrackapp.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -29,12 +32,12 @@ class PlasticoActivity : AppCompatActivity() {
         recyclerView.layoutManager = GridLayoutManager(this, 2)
 
         val listaProductos = listOf(
-            Producto("Botella Plástica", 100, R.drawable.botella),
-            Producto("Empaque de papas", 30, R.drawable.empaque_papas),
-            Producto("Bolsa plástica", 50, R.drawable.bolsa),
-            Producto("Producto de limpieza", 100, R.drawable.limpieza),
-            Producto("Tapas", 30, R.drawable.tapas),
-            Producto("Vasos", 30, R.drawable.vaso)
+            Producto("Botella Plástica", 100, R.drawable.ic_botellas),
+            Producto("Empaque de papas", 30, R.drawable.ic_bolsapapas),
+            Producto("Bolsa plástica", 50, R.drawable.ic_bolsaplastica),
+            Producto("Producto de limpieza", 100, R.drawable.ic_botellas),
+            Producto("Tapas", 30, R.drawable.ic_tapas),
+            Producto("Vasos", 30, R.drawable.ic_vasos)
         )
 
         adapter = ProductoAdapter(listaProductos) { producto ->
