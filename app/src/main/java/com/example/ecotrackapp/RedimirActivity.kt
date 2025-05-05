@@ -6,9 +6,10 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class RedimirActivity : AppCompatActivity() {
+class RedimirActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonClickListener{
 
     private lateinit var containerRewards: LinearLayout
 
@@ -28,7 +29,33 @@ class RedimirActivity : AppCompatActivity() {
         agregarRecompensa("Helado gourmet Popsy", "10,000 Puntos", R.drawable.popsy)
         agregarRecompensa("Cine", "10,000 Puntos", R.drawable.cinema)
         agregarRecompensa("Mía", "10,000 Puntos", R.drawable.mia)
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.bottomNavContainer, BottomNavigationActivity())
+            .commit()
     }
+
+    override fun onButtonClicked(screen: Int) {
+        when (screen) {
+            1 -> {
+                startActivity(Intent(this, PrincipalActivity::class.java))
+                finish()
+            }
+            2 -> {
+                startActivity(Intent(this, RecicladoActivity ::class.java))
+                finish()
+            }
+            3 -> {
+                startActivity(Intent(this, RedimirActivity::class.java))
+                finish()
+            }
+            4 -> {
+                startActivity(Intent(this, AccountActivity::class.java))
+                finish()
+            }
+        }
+    }
+
 
     private fun agregarRecompensa(nombre: String, puntos: String, imagenResId: Int) {
         val card = layoutInflater.inflate(R.layout.item_reward_card, containerRewards, false)
@@ -54,6 +81,10 @@ class RedimirActivity : AppCompatActivity() {
         }
 
 
+
+
         containerRewards.addView(card)
     }
+
 }
+

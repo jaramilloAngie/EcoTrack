@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#E8FBF2">
 
-    <!-- Encabezado con logo y menú hamburguesa -->
+    <!-- Encabezado con logo -->
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -51,13 +51,13 @@
     <!-- Contenido principal -->
     <LinearLayout
         android:layout_below="@id/header"
-        android:layout_above="@id/bottomNav"
+        android:layout_above="@+id/bottomNavContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!-- Tarjeta de perfil centrada -->
+        <!-- Tarjeta de perfil -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,8 +71,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/ic_perfil"
-                android:contentDescription="Perfil"
-                 />
+                android:contentDescription="Perfil" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -122,7 +121,7 @@
         <!-- Tarjeta historial de reciclado -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="339dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/white_rounded_box"
             android:elevation="4dp"
@@ -156,7 +155,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- Mensaje de no datos -->
+            <!-- Mensaje sin datos -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -169,11 +168,10 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Navegación inferior -->
-    <include
-        layout="@layout/bottom_navigation"
+    <!-- Contenedor para la navegación inferior (como Fragment) -->
+    <FrameLayout
+        android:id="@+id/bottomNavContainer"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true" />
-
 </RelativeLayout>

@@ -7,7 +7,7 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class AccountActivity : AppCompatActivity() {
+class AccountActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonClickListener {
 
     private lateinit var acercaDeMi: LinearLayout
     private lateinit var membresia: LinearLayout
@@ -64,6 +64,34 @@ class AccountActivity : AppCompatActivity() {
             finish()
         }
 
+
+
     }
+
+    override fun onButtonClicked(screen: Int) {
+        when (screen) {
+            1 -> {
+                startActivity(Intent(this, PrincipalActivity::class.java))
+                finish()
+            }
+            2 -> {
+                startActivity(Intent(this, RecicladoActivity::class.java))
+                finish()
+            }
+            3 -> {
+                startActivity(Intent(this, RedimirActivity::class.java))
+                finish()
+            }
+            4 -> {
+                startActivity(Intent(this, AccountActivity::class.java))
+                finish()
+            }
+        }
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.bottomNavContainer, BottomNavigationActivity())
+            .commit()
+    }
+
 }
+
 

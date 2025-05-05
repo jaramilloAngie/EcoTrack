@@ -1,41 +1,39 @@
 package com.example.ecotrackapp
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.ecotrackapp.R
 
-class RecicladoActivity : AppCompatActivity() {
+class RecicladoActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_reciclado) // Asegúrate que este es el XML correcto
+        setContentView(R.layout.activity_reciclado)
 
+        // Cargar el fragmento de navegación inferior (si tu bottom_navigation está implementado como Fragment)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.bottomNavContainer, BottomNavigationActivity())
+            .commit()
+    }
 
-        // Navegación inferior
-       // val btnInicio = findViewById<ImageView>(R.id.ic_inicio)
-       // val btnEscanear = findViewById<ImageView>(R.id.ic_reciclado)
-        //val btnPuntos = findViewById<ImageView>(R.id.iconoPuntos)
-        //val btnPerfil = findViewById<ImageView>(R.id.iconoPerfil)
-
-        //btnInicio.setOnClickListener {
-            // Ir a pantalla de inicio
-            finish() // Si Reciclado fue abierto desde Inicio
-        //}
-
-        //btnEscanear.setOnClickListener {
-            // Abre EscanearActivity
-            // startActivity(Intent(this, EscanearActivity::class.java))
-       // }
-
-        //btnPuntos.setOnClickListener {
-            // Abre PuntosActivity
-            // startActivity(Intent(this, PuntosActivity::class.java))
-        //}
-
-        //btnPerfil.setOnClickListener {
-            // Abre PerfilActivity
-            // startActivity(Intent(this, PerfilActivity::class.java))
-        //}
+    override fun onButtonClicked(screen: Int) {
+        when (screen) {
+            1 -> {
+                startActivity(Intent(this, PrincipalActivity::class.java))
+                finish()
+            }
+            2 -> {
+                Toast.makeText(this, "Ya estás en Reciclado", Toast.LENGTH_SHORT).show()
+            }
+            3 -> {
+                startActivity(Intent(this, RedimirActivity::class.java))
+                finish()
+            }
+            4 -> {
+                startActivity(Intent(this, AccountActivity::class.java))
+                finish()
+            }
+        }
     }
 }

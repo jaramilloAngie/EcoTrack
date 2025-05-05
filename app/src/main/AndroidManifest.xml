@@ -29,7 +29,8 @@
         <activity android:name=".RedimirActivity" />
         <activity android:name=".RecicladoActivity" />
         <activity android:name=".AccountActivity" />
-        <activity android:name=".BottomNavigationActivity" />
+        <activity android:name=".BottomNavigationActivity"
+            tools:ignore="Instantiatable" />
         <activity android:name=".AboutMeActivity" />
         <activity android:name=".VersionActivity" />
         <activity android:name=".DetailRewardActivity" />
