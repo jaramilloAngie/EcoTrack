@@ -41,7 +41,7 @@ class AccountActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonCl
         }
 
         membresia.setOnClickListener {
-            val intent = Intent(this,AboutMeActivity::class.java)
+            val intent = Intent(this,MemberShipActivity::class.java)
             startActivity(intent)
         }
 

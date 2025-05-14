@@ -43,11 +43,11 @@ class PrincipalActivity : AppCompatActivity(), BottomNavigationActivity.OnButton
         popupMenu.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.opcion_cuenta -> {
-                    Toast.makeText(this, "Cuenta seleccionada", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, AccountActivity::class.java))
                     true
                 }
                 R.id.opcion_membresia -> {
-                    Toast.makeText(this, "Membresía seleccionada", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, MemberShipActivity::class.java))
                     true
                 }
                 else -> false
@@ -55,4 +55,5 @@ class PrincipalActivity : AppCompatActivity(), BottomNavigationActivity.OnButton
         }
         popupMenu.show()
     }
+
 }
