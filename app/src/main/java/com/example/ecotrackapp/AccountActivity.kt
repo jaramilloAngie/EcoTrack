@@ -63,8 +63,9 @@ class AccountActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonCl
             startActivity(intent)
             finish()
         }
-
-
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.bottomNavContainer, BottomNavigationActivity())
+            .commit()
 
     }
 
