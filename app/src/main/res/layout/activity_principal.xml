@@ -160,7 +160,7 @@
                 android:gravity="center"
                 android:padding="16dp">
 
-                <ImageView
+                <Button
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/ic_recycle_yellow"
@@ -186,7 +186,7 @@
                 android:gravity="center"
                 android:padding="16dp">
 
-                <ImageView
+                <Button
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/ic_recycle_blue"
@@ -211,7 +211,7 @@
                 android:gravity="center"
                 android:padding="16dp">
 
-                <ImageView
+                <Button
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/ic_recycle_green"
@@ -236,7 +236,8 @@
                 android:gravity="center"
                 android:padding="16dp">
 
-                <ImageView
+                <Button
+                    android:id="@+id/btn_puntos_recoleccion"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:src="@drawable/ic_location_red"

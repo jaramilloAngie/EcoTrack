@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFF">
 
-    <!-- Botón de volver -->
+
     <ImageView
+
         android:id="@+id/backButton"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_marginTop="100dp"
         android:layout_margin="20dp"
-        android:src="@drawable/ic_arrow_back"
-         />
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_arrow_back" />
 
-    <!-- Título -->
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:textColor="#0D7501" />
 
     <!-- Buscador -->
@@ -47,7 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etBuscar"
         android:layout_above="@id/bottomNav"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        tools:ignore="NotSibling">
 
         <LinearLayout
             android:id="@+id/containerRewards"

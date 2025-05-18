@@ -1,20 +1,28 @@
 package com.example.ecotrackapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.PopupMenu
-import android.widget.Toast
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class PrincipalActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonClickListener {
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
 
-        // Cargar el fragmento de navegación solo una vez
+        val btnPuntos = findViewById<Button>(R.id.btn_puntos_recoleccion)
+        btnPuntos.setOnClickListener {
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Cargar el fragmento de navegación
         supportFragmentManager.beginTransaction()
             .replace(R.id.bottom_navigation_container, BottomNavigationActivity())
             .commit()

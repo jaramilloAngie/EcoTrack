@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#E8FBF2">
 
-    <!-- Encabezado con logo -->
+    <!-- Encabezado  -->
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -14,6 +14,7 @@
         android:paddingTop="100dp">
 
         <LinearLayout
+            android:layout_marginTop="30dp"
             android:id="@+id/logoContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -168,7 +169,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Contenedor para la navegación inferior (como Fragment) -->
+    <!-- navegación inferior-->
     <FrameLayout
         android:id="@+id/bottomNavContainer"
         android:layout_width="match_parent"
