@@ -29,7 +29,7 @@
                 android:fontFamily="@font/holtwoodonesc"
                 android:text="EC"
                 android:textSize="28sp"
-                android:textColor="#757575" />
+                android:textColor="#000000" />
 
             <ImageView
                 android:layout_width="32dp"
@@ -45,7 +45,7 @@
                 android:fontFamily="@font/holtwoodonesc"
                 android:text="TRACK"
                 android:textSize="28sp"
-                android:textColor="#757575" />
+                android:textColor="#000000" />
         </LinearLayout>
     </RelativeLayout>
 

@@ -11,7 +11,6 @@ class RecicladoActivity : AppCompatActivity(), BottomNavigationActivity.OnButton
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reciclado)
 
-        // Cargar el fragmento de navegación inferior (si tu bottom_navigation está implementado como Fragment)
         supportFragmentManager.beginTransaction()
             .replace(R.id.bottomNavContainer, BottomNavigationActivity())
             .commit()

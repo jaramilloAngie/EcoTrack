@@ -24,7 +24,7 @@ class MyAddressActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_address) // tu layout
+        setContentView(R.layout.activity_my_address)
 
         backButton = findViewById(R.id.backButton)
         backButton.setOnClickListener {
@@ -52,7 +52,6 @@ class MyAddressActivity : AppCompatActivity() {
             val country = countryEditText.text.toString()
             val saveAddress = saveAddressSwitch.isChecked
 
-            // Aquí puedes hacer lo que quieras: guardar en base de datos, enviar al servidor, etc.
             Toast.makeText(
                 this,
                 "Nombre: $name\nEmail: $email\nTel: $phone\nDirección: $address\nCódigo Postal: $postalCode\nCiudad: $city\nPaís: $country\nGuardar: $saveAddress",

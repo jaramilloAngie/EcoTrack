@@ -37,7 +37,6 @@ class DetailRewardActivity : AppCompatActivity() {
 
         // Acción de botón canjear
         btnCanjear.setOnClickListener {
-            // Aquí puedes poner lógica adicional para confirmar el canje
         }
     }
 }

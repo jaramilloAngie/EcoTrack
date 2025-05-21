@@ -34,7 +34,7 @@ class AccountActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonCl
             onBackPressedDispatcher.onBackPressed()
         }
 
-        // Configuramos los listeners para cada opción
+        // Configuración los listeners para cada opción
         acercaDeMi.setOnClickListener {
             val intent = Intent(this, AboutMeActivity::class.java)
             startActivity(intent)
@@ -56,7 +56,6 @@ class AccountActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonCl
         }
 
         signOut.setOnClickListener {
-            // Aquí puedes hacer la lógica de cerrar sesión
             Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, SignInActivity::class.java) // O a donde quieras que regrese el usuario
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

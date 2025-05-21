@@ -16,7 +16,7 @@ class PrincipalActivity : AppCompatActivity(), BottomNavigationActivity.OnButton
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
 
-        val btnPuntos = findViewById<Button>(R.id.btn_puntos_recoleccion)
+        val btnPuntos = findViewById<ImageView>(R.id.btn_puntos_recoleccion)
         btnPuntos.setOnClickListener {
             val intent = Intent(this, MapsActivity::class.java)
             startActivity(intent)

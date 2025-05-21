@@ -19,13 +19,13 @@ class MemberShipActivity : AppCompatActivity(), BottomNavigationActivity.OnButto
         // Configurar botón de retroceso
         setupNavigation()
 
-        // Cargar fragmento de navegación inferior en el contenedor nuevo
+        // Fragmento de navegación inferior
         supportFragmentManager.beginTransaction()
             .replace(R.id.bottom_navigation_container, BottomNavigationActivity())
             .commit()
     }
 
-    // Manejo de clics desde el componente de navegación inferior
+    // Manejo de clics desde la navegación inferior
     override fun onButtonClicked(screen: Int) {
         when (screen) {
             1 -> {

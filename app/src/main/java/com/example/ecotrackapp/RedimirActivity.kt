@@ -72,7 +72,6 @@ class RedimirActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonCl
         boton.setOnClickListener {
             val intent = Intent(this, DetailRewardActivity::class.java)
 
-            // Si quieres enviar datos como nombre, puntos e imagen:
             intent.putExtra("rewardName", "Nombre del premio")
             intent.putExtra("rewardPoints", "10000")
             intent.putExtra("rewardImage", R.drawable.netflix)

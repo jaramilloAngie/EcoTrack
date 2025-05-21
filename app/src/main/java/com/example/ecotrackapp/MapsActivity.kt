@@ -2,6 +2,7 @@ package com.example.ecotrackapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
@@ -32,9 +33,8 @@ class MapsActivity : AppCompatActivity() {
         val puntos = listOf(
             org.osmdroid.util.GeoPoint(4.0865, -76.1953), // Universidad del Valle
             org.osmdroid.util.GeoPoint(4.0880, -76.1940), // Parque Bolívar
-            org.osmdroid.util.GeoPoint(4.0840, -76.1910), // Estación de Bombero
-            org.osmdroid.util.GeoPoint(4.0900, -76.1965),
-            org.osmdroid.util.GeoPoint(4.0855, -76.1930)
+            org.osmdroid.util.GeoPoint(4.0840, -76.1910) // Estación de Bomberos
+
 
         )
 
@@ -44,7 +44,7 @@ class MapsActivity : AppCompatActivity() {
             marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
             marker.title = "Punto de recolección ${index + 1}"
             marker.snippet = "Aquí puedes dejar reciclaje"
-            marker.setIcon(getDrawable(R.drawable.ic_location_gris)) // Tu propio ícono si lo deseas
+            marker.setIcon(ContextCompat.getDrawable(this, R.drawable.ic_location_gris))
             map.overlays.add(marker)
         }
     }

@@ -14,7 +14,6 @@ class VersionActivity : AppCompatActivity() {
         binding = ActivityVersionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Configurar la Toolbar para manejar el botón de regreso
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
