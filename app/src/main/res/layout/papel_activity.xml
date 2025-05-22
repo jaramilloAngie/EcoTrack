@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Papel_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".PapelActivity">
+
+
+
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@android:color/white"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Papel"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:textColor="#00C853"/>
+
+    </LinearLayout>
+
+    <!-- ScrollView with Products -->
+    <ScrollView
+        android:layout_below="@id/topBar"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:id="@+id/productsGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="15dp"
+            android:orientation="horizontal"
+            android:rowCount="4">
+
+
+            <!-- Product Card 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageProducto"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_periodico"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/textNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Periódico"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/textPuntos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textColor="#00C853"
+                        android:paddingTop="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/buttonAgregar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitCenter"
+                        android:backgroundTint="@color/green"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_add"
+                        android:contentDescription="Agregar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Product Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageProducto1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_hojasdepapel"/>
+
+                    <TextView
+                        android:id="@+id/textNombre1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hojas de papel"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/textPuntos1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textColor="#00C853"
+                        android:paddingTop="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/buttonAgregar1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitCenter"
+                        android:backgroundTint="@color/green"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_add"
+                        android:contentDescription="Agregar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product Card 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageProducto2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_caja"/>
+
+                    <TextView
+                        android:id="@+id/textNombre2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Caja de cartón"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/textPuntos2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textColor="#00C853"
+                        android:paddingTop="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/buttonAgregar2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitCenter"
+                        android:backgroundTint="@color/green"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_add"
+                        android:contentDescription="Agregar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product Card 4 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageProducto3"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_cubetahuevos" />
+
+                    <TextView
+                        android:id="@+id/textNombre3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cubeta de huevos"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/textPuntos3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="40"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textColor="#00C853"
+                        android:paddingTop="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/buttonAgregar3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitCenter"
+                        android:backgroundTint="@color/green"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_add"
+                        android:contentDescription="Agregar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product Card 5 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageProducto4"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_bolsapapel"/>
+
+                    <TextView
+                        android:id="@+id/textNombre4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bolsa de papel"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/textPuntos4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textColor="#00C853"
+                        android:paddingTop="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/buttonAgregar4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitCenter"
+                        android:backgroundTint="@color/green"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_add"
+                        android:contentDescription="Agregar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product Card 6 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageProducto5"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_vasocarton"/>
+
+                    <TextView
+                        android:id="@+id/textNombre5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="vaso de cartón"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/textPuntos5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textColor="#00C853"
+                        android:paddingTop="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/buttonAgregar5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitCenter"
+                        android:backgroundTint="@color/green"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_add"
+                        android:contentDescription="Agregar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product Card 7 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageProducto6"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_empaqueleche"/>
+
+                    <TextView
+                        android:id="@+id/textNombre6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Empaque de leche"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:paddingTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/textPuntos6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textColor="#00C853"
+                        android:paddingTop="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/buttonAgregar6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitCenter"
+                        android:backgroundTint="@color/green"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_add"
+                        android:contentDescription="Agregar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </GridLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        tools:ignore="MissingClass" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_papelera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_papelera"
+        android:contentDescription="Eliminar"
+        android:backgroundTint="@color/green_primary"
+        app:tint="@android:color/white" />
+
+</RelativeLayout>
