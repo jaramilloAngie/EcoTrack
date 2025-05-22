@@ -42,6 +42,7 @@
         <activity android:name=".MapsActivity"/>
         <activity android:name=".PlasticoActivity"/>
         <activity android:name=".SignInActivity"/>
+        <activity android:name=".PapelActivity"/>
 
     </application>
 

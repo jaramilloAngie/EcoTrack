@@ -22,11 +22,11 @@ class PrincipalActivity : AppCompatActivity(), BottomNavigationActivity.OnButton
             startActivity(intent)
         }
 
-        /*val btnPapel = findViewById<ImageView>(R.id.btn_papel)
+        val btnPapel = findViewById<ImageView>(R.id.btn_papel)
             btnPapel.setOnClickListener {
-            val intent = Intent(this, RecicladoActivity::class.java)
+            val intent = Intent(this, PapelActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
         val btnVidrio = findViewById<ImageView>(R.id.btn_vidrio)
         btnVidrio.setOnClickListener {
