@@ -17,7 +17,7 @@
 
 
         <activity
-            android:name=".PrincipalActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.EcoTrackApp">
@@ -28,7 +28,7 @@
         </activity>
 
         <!-- Actividades personalizadas -->
-
+        <activity android:name=".PrincipalActivity" />
         <activity android:name=".RedimirActivity" />
         <activity android:name=".RecicladoActivity" />
         <activity android:name=".AccountActivity" />
@@ -40,6 +40,8 @@
         <activity android:name=".MyAddressActivity" />
         <activity android:name=".MemberShipActivity" />
         <activity android:name=".MapsActivity"/>
+        <activity android:name=".PlasticoActivity"/>
+        <activity android:name=".SignInActivity"/>
 
     </application>
 
