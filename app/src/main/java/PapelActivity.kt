@@ -1,4 +1,4 @@
-package com.example.ecotrackapp;
+package com.example.ecotrackapp
 
 import Producto
 import ProductoAdapter

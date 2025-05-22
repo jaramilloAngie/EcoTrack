@@ -30,7 +30,7 @@ class PrincipalActivity : AppCompatActivity(), BottomNavigationActivity.OnButton
 
         val btnVidrio = findViewById<ImageView>(R.id.btn_vidrio)
         btnVidrio.setOnClickListener {
-            val intent = Intent(this, RecicladoActivity::class.java)
+            val intent = Intent(this, VidrioActivity::class.java)
             startActivity(intent)
         }
 

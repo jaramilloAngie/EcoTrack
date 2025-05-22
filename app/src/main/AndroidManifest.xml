@@ -43,6 +43,7 @@
         <activity android:name=".PlasticoActivity"/>
         <activity android:name=".SignInActivity"/>
         <activity android:name=".PapelActivity"/>
+        <activity android:name=".VidrioActivity"/>
 
     </application>
 
