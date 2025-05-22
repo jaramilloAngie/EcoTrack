@@ -22,6 +22,24 @@ class PrincipalActivity : AppCompatActivity(), BottomNavigationActivity.OnButton
             startActivity(intent)
         }
 
+        val btnPapel = findViewById<ImageView>(R.id.btn_papel)
+            btnPapel.setOnClickListener {
+            val intent = Intent(this, RecicladoActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnVidrio = findViewById<ImageView>(R.id.btn_vidrio)
+        btnVidrio.setOnClickListener {
+            val intent = Intent(this, RecicladoActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnPlastico = findViewById<ImageView>(R.id.btn_plastico)
+        btnPlastico.setOnClickListener {
+            val intent = Intent(this, RecicladoActivity::class.java)
+            startActivity(intent)
+        }
+
         // Cargar el fragmento de navegación
         supportFragmentManager.beginTransaction()
             .replace(R.id.bottom_navigation_container, BottomNavigationActivity())
