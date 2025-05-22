@@ -1,16 +1,15 @@
-package com.tuapp.reciclaje
+package com.example.ecotrackapp
 
-import Producto
 import ProductoAdapter
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ecotrackapp.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class PlasticoActivity : AppCompatActivity() {
+class PlasticoActivity : AppCompatActivity(),BottomNavigationActivity.OnButtonClickListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ProductoAdapter
@@ -21,61 +20,34 @@ class PlasticoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.plastico_activity)
-
-        // Inicializar views
-        recyclerView = findViewById(R.id.recyclerViewProductos)
-        fabCarrito = findViewById(R.id.fabCarrito)
-        bottomNavigationView = findViewById(R.id.bottomNavigationView)
-
-        // Configurar RecyclerView
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
-
-        val listaProductos = listOf(
-            Producto("Botella Plástica", 100, R.drawable.ic_botellas),
-            Producto("Empaque de papas", 30, R.drawable.ic_bolsapapas),
-            Producto("Bolsa plástica", 50, R.drawable.ic_bolsaplastica),
-            Producto("Producto de limpieza", 100, R.drawable.ic_botellas),
-            Producto("Tapas", 30, R.drawable.ic_tapas),
-            Producto("Vasos", 30, R.drawable.ic_vasos)
-        )
-
-        adapter = ProductoAdapter(listaProductos) { producto ->
-            agregarProductoAlCarrito(producto)
+        setContentView(R.layout.activity_plastico)
+        val backButton = findViewById<ImageView>(R.id.backButton)
+        backButton.setOnClickListener {
+            finish()
         }
-        recyclerView.adapter = adapter
-
-        // FAB carrito click
-        fabCarrito.setOnClickListener {
-            // Aquí puedes abrir una pantalla de resumen del carrito
-        }
-
-        // Navegación inferior
-        bottomNavigationView.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.menu_inicio -> {
-                    // Ir a Inicio
-                    true
-                }
-                R.id.menu_reciclado -> {
-                    // Ir a Reciclado
-                    true
-                }
-                R.id.menu_redimir -> {
-                    // Ir a Redimir
-                    true
-                }
-                R.id.menu_perfil -> {
-                    // Ir a Perfil
-                    true
-                }
-                else -> false
-            }
-        }
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.bottomNavContainer, BottomNavigationActivity())
+            .commit()
     }
 
-    private fun agregarProductoAlCarrito(producto: Producto) {
-        carritoCantidad++
-        fabCarrito.setImageResource(R.drawable.ic_cart_con_numero) // Puedes personalizar para mostrar cantidad
+    override fun onButtonClicked(screen: Int) {
+        when (screen) {
+            1 -> {
+                startActivity(Intent(this, PrincipalActivity::class.java))
+                finish()
+            }
+            2 -> {
+                startActivity(Intent(this, RecicladoActivity ::class.java))
+                finish()
+            }
+            3 -> {
+                startActivity(Intent(this, RedimirActivity::class.java))
+                finish()
+            }
+            4 -> {
+                startActivity(Intent(this, AccountActivity::class.java))
+                finish()
+            }
+        }
     }
 }

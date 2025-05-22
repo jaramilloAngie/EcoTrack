@@ -5,6 +5,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ecotrackapp.R
 
 class ProductoAdapter(
     private val productos: List<Producto>,
@@ -19,7 +20,7 @@ class ProductoAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_producto, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_login, parent, false)
         return ProductoViewHolder(view)
     }
 

@@ -1,4 +1,4 @@
-package com.tuapp.ecotrack
+package com.example.ecotrackapp
 
 import android.content.Intent
 import android.os.Bundle
@@ -24,8 +24,8 @@ class LoginActivity : AppCompatActivity() {
             val password = passwordEditText.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
-                // Aquí pondrías la lógica para iniciar sesión
-                Toast.makeText(this, "Iniciando sesión...", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, PrincipalActivity::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Por favor ingresa tus datos", Toast.LENGTH_SHORT).show()
             }
@@ -37,8 +37,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         registerButton.setOnClickListener {
-            // Aquí abres pantalla para registrarse
-            Toast.makeText(this, "Ir a pantalla de registro", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
         }
     }
 }

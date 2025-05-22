@@ -57,7 +57,7 @@ class AccountActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonCl
 
         signOut.setOnClickListener {
             Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, SignInActivity::class.java) // O a donde quieras que regrese el usuario
+            val intent = Intent(this, LoginActivity::class.java) // O a donde quieras que regrese el usuario
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
