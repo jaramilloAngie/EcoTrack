@@ -13,7 +13,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import com.example.ecotrackapp.LoginRequest
 import com.example.ecotrackapp.LoginResponse
-
+import com.example.ecotrackapp.session.LoggedUser
 
 
 class LoginActivity : AppCompatActivity() {
@@ -44,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
                     ) {
                         if (response.isSuccessful && response.body()?.success == true) {
                             val intent = Intent(this@LoginActivity, PrincipalActivity::class.java)
+                            LoggedUser.user = response.body()?.user
                             startActivity(intent)
                             finish()
                         } else {

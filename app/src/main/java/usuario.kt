@@ -1,3 +1,7 @@
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Usuario(
     val id: Int?,
     val nombre: String,
@@ -8,4 +12,5 @@ data class Usuario(
     val ciudad: String?,
     val puntos: Int = 0,
     val fecha_creacion: String?  // Puedes usar String para fecha en formato ISO o Date si haces parsing
-)
+): Parcelable
+

@@ -77,12 +77,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/ic_person" android:layout_marginEnd="16dp"
-                    android:contentDescription="@string/name" /> <TextView
+                    android:contentDescription="@string/name" />
+                <TextView
                     android:id="@+id/nameTextView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Jaden Jackson"
                     android:textSize="16sp"
                     android:textColor="#000000" />
 

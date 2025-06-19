@@ -1,11 +1,14 @@
 package com.example.ecotrackapp
 
+import Usuario
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ecotrackapp.session.LoggedUser
 
 class AccountActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonClickListener {
 
@@ -16,11 +19,12 @@ class AccountActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonCl
     private lateinit var signOut: LinearLayout
     private lateinit var backButton: ImageView
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account)
-
+        findViewById<TextView>(R.id.tvNombre).text = LoggedUser.user?.nombre?.uppercase()
+        findViewById<TextView>(R.id.tvPuntos).text = LoggedUser.user?.puntos?.toString() + " Puntos"
+        findViewById<TextView>(R.id.tvEmail).text = LoggedUser.user?.correo_electronico?.toString()
         // Referencias a los LinearLayout de cada opción
         val listaOpciones = findViewById<LinearLayout>(R.id.listaOpciones)
 
@@ -56,6 +60,7 @@ class AccountActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonCl
         }
 
         signOut.setOnClickListener {
+            LoggedUser.user = null
             Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, LoginActivity::class.java) // O a donde quieras que regrese el usuario
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

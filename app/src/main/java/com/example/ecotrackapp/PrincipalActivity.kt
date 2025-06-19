@@ -1,5 +1,6 @@
 package com.example.ecotrackapp
 
+import Usuario
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +8,9 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ecotrackapp.session.LoggedUser
 
 class PrincipalActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonClickListener {
 
@@ -15,8 +18,10 @@ class PrincipalActivity : AppCompatActivity(), BottomNavigationActivity.OnButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
+        findViewById<TextView>(R.id.textusername).text = LoggedUser.user?.nombre?.uppercase()
+        findViewById<TextView>(R.id.puntaje).text = LoggedUser.user?.puntos?.toString()
 
-        val btnPuntos = findViewById<ImageView>(R.id.btn_puntos_recoleccion)
+    val btnPuntos = findViewById<ImageView>(R.id.btn_puntos_recoleccion)
         btnPuntos.setOnClickListener {
             val intent = Intent(this, MapsActivity::class.java)
             startActivity(intent)
@@ -25,7 +30,7 @@ class PrincipalActivity : AppCompatActivity(), BottomNavigationActivity.OnButton
         val btnPapel = findViewById<ImageView>(R.id.btn_papel)
             btnPapel.setOnClickListener {
             val intent = Intent(this, PapelActivity::class.java)
-            startActivity(intent)
+                startActivity(intent)
         }
 
         val btnVidrio = findViewById<ImageView>(R.id.btn_vidrio)

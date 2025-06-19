@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.text.InputType
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ecotrackapp.session.LoggedUser
 
 class AboutMeActivity : AppCompatActivity() {
 
@@ -23,6 +24,9 @@ class AboutMeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about_me)
+        findViewById<TextView>(R.id.nameTextView).text = (LoggedUser.user?.nombre?.uppercase())
+        findViewById<EditText>(R.id.emailEditText).setText(LoggedUser.user?.correo_electronico?.toString())
+        findViewById<EditText>(R.id.phoneEditText).setText(LoggedUser.user?.celular?.toString())
 
         // Referencias
         backButton = findViewById(R.id.backButton)

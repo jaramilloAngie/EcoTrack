@@ -1,16 +1,21 @@
 package com.example.ecotrackapp
 
+import Usuario
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ecotrackapp.session.LoggedUser
 
 class RecicladoActivity : AppCompatActivity(), BottomNavigationActivity.OnButtonClickListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reciclado)
-
+        findViewById<TextView>(R.id.textusername).text = LoggedUser.user?.nombre?.uppercase()
+        findViewById<TextView>(R.id.puntaje).text = LoggedUser.user?.puntos?.toString()
         supportFragmentManager.beginTransaction()
             .replace(R.id.bottomNavContainer, BottomNavigationActivity())
             .commit()

@@ -2,6 +2,7 @@ package com.example.ecotrackapp
 
 import Producto
 import ProductoAdapter
+import Usuario
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
@@ -20,11 +21,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class VidrioActivity : AppCompatActivity(),BottomNavigationActivity.OnButtonClickListener {
 
     private var carritoCantidad = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vidrio)
-
         val backButton = findViewById<ImageView>(R.id.backButton)
         backButton.setOnClickListener {
             finish()

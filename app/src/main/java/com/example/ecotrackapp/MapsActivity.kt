@@ -1,5 +1,6 @@
 package com.example.ecotrackapp
 
+import Usuario
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -31,9 +32,9 @@ class MapsActivity : AppCompatActivity() {
 
         // Puntos de recolección (simulados)
         val puntos = listOf(
-            org.osmdroid.util.GeoPoint(4.0865, -76.1953), // Universidad del Valle
-            org.osmdroid.util.GeoPoint(4.0880, -76.1940), // Parque Bolívar
-            org.osmdroid.util.GeoPoint(4.0840, -76.1910) // Estación de Bomberos
+            org.osmdroid.util.GeoPoint(4.0706, -76.1902), // Universidad del Valle
+            org.osmdroid.util.GeoPoint(4.0858, -76.1971), // Parque Bolívar
+            org.osmdroid.util.GeoPoint(4.0863, -76.1951) // Estación de Bomberos
 
 
         )
