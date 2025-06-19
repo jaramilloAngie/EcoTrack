@@ -5,51 +5,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
-    tools:context=".SignInActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/holtwoodonesc"
-        android:text="EC   TRACK"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/name_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16" />
+    android:layout_gravity="center"
+    android:background="#5FED92"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
 
     <ImageView
-        android:layout_width="44dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/img"
-        app:layout_constraintBottom_toTopOf="@+id/name_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        android:id="@+id/logoImageView"
+        android:layout_width="296dp"
+        android:layout_height="59dp"
+        android:layout_gravity="start"
+        android:contentDescription="Logo"
+        android:src="@drawable/ecotrack_logo"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="16dp" />
 
-    <EditText
-        android:id="@+id/name_input"
+    <Spinner
+        android:id="@+id/city_spinner"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/spinner_background"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:background="@drawable/rounded_input_text"
-        android:hint="Nombre"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:imeOptions="actionNext"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/gender_spinner"
+        app:layout_constraintBottom_toTopOf="@+id/password_input"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
@@ -58,64 +42,13 @@
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_background"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:background="@drawable/spinner_background"
         app:layout_constraintBottom_toTopOf="@+id/phone_input"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/phone_input"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="10dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:background="@drawable/rounded_input_text"
-        android:hint="Celular"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:imeOptions="actionNext"
-        android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/email_adress_input"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/email_adress_input"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="10dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:background="@drawable/rounded_input_text"
-        android:hint="Correo electrónico"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:imeOptions="actionNext"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/city_spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Spinner
-        android:id="@+id/city_spinner"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="10dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:background="@drawable/spinner_background"
-        app:layout_constraintBottom_toTopOf="@+id/password_input"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -124,17 +57,78 @@
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="10dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_input_text"
         android:hint="Contraseña"
-        android:textColor="#000000"
-        android:textSize="20sp"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/checkbox"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded_input_text"
+        android:hint="Nombre"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/gender_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/phone_input"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_input_text"
+        android:hint="Celular"
+        android:imeOptions="actionNext"
+        android:inputType="phone"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/email_adress_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/email_adress_input"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_input_text"
+        android:hint="Correo electrónico"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/city_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -143,13 +137,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="44dp"
         android:text="@string/checkbox_text"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -158,6 +153,7 @@
         android:layout_height="55dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_button"
         android:text="Registrar"
         android:textAllCaps="false"
@@ -166,7 +162,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
