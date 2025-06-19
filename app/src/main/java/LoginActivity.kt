@@ -24,8 +24,14 @@ class LoginActivity : AppCompatActivity() {
         val emailEditText = findViewById<EditText>(R.id.emailEditText)
         val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
         val loginButton = findViewById<Button>(R.id.loginButton)
-        val forgotPasswordText = findViewById<TextView>(R.id.forgotPasswordText)
         val registerButton = findViewById<Button>(R.id.registerButton)
+
+        val forgotPassword = findViewById<TextView>(R.id.forgotPasswordText)
+        forgotPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
 
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString()
@@ -70,9 +76,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        forgotPasswordText.setOnClickListener {
-            Toast.makeText(this, "Función Olvidé mi contraseña", Toast.LENGTH_SHORT).show()
-        }
 
         registerButton.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)

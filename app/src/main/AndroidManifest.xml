@@ -48,6 +48,8 @@
         <activity android:name=".SignInActivity"/>
         <activity android:name=".PapelActivity"/>
         <activity android:name=".VidrioActivity"/>
+        <activity android:name=".ForgotPasswordActivity" />
+
 
     </application>
 
